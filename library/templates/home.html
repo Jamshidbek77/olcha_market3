@@ -5,6 +5,29 @@
 
 {% block content %}
 <h1>
-    Hello world
+    Olcha marketga xush kelibsiz
 </h1>
+
+<h2>bizning barcha bo'limlarimiz:</h2>
+<form action="{% url 'product' %}">
+    <button>
+        mahsulotlar
+    </button>
+</form>
+<br>
+
+<h2>bizning barcha dokonlarimiz</h2>
+<form action="{% url 'shops' %}">
+    <button>
+        dokonlar
+    </button>
+</form>
+<br>
+<h2>bizning barcha foydalanuvchilarimiz</h2>
+<form action="{% url 'users' %}">
+    <button>
+        foydalanuvchilar
+    </button>
+</form>
+
 {% endblock %}

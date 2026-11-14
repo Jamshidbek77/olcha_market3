@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Product
+{% endblock %}
+{% block content %}
+<h1>Barcha mahsulotlar:</h1>
+<ol>
+    {% for product in products %}
+        <li>
+            {{ product.shop.name }}
+            {{ product.shop.price }}
+        </li>
+    {% endfor %}
+</ol>
+{% endblock %}

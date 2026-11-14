@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Shop
+{% endblock %}
+{% block content %}
+<h1>Barcha do'konlar:</h1>
+<ol>
+    {% for shop in shops %}
+        <li>
+            {{ shop.name }}
+            {{ shop.address }}
+        </li>
+    {% endfor %}
+</ol>
+{% endblock %}
