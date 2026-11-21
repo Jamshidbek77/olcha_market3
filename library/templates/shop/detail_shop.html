@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Detail Shop
+{% endblock %}
+{% block content %}
+<h1>{{ shop.name }} do'kon haqida to'liq ma'lumot:</h1>
+<h3>
+    turi: {{ shop.turi }}
+</h3>
+<h3>
+    name: {{ shop.name }}
+</h3>
+<h3>
+    price: {{ shop.price }}
+</h3>
+<h3>
+    address: {{ shop.address }}
+</h3>
+<form action="{% url 'shops' %}">
+    <button>
+        ortga
+    </button>
+</form>
+{% endblock %}

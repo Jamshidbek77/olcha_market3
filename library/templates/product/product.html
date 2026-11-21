@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
-{% block title %}
-Product
-{% endblock %}
+
+{% block title %}Product{% endblock %}
+
 {% block content %}
-<h1>Barcha mahsulotlar:</h1>
-<ol>
+<h1>Barcha mahsulotlar</h1>
+<div class="grid">
     {% for product in products %}
-        <li>
-            {{ product.shop.name }}
-            {{ product.shop.price }}
-        </li>
+        <div class="card">
+            <h3>{{ product.shop.name }}</h3>
+            <p>Xaridor: {{ product.user.first_name }}</p>
+            <p>Sana: {{ product.buy }}</p>
+        </div>
     {% endfor %}
-</ol>
+</div>
 {% endblock %}

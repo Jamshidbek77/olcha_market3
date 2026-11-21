@@ -7,9 +7,16 @@ Shop
 <ol>
     {% for shop in shops %}
         <li>
-            {{ shop.name }}
+            <a href="{% url 'shop' shop.pk %}">
+                {{ shop.name }}
+            </a>
             {{ shop.address }}
         </li>
     {% endfor %}
 </ol>
+<form action="{% url 'create_shop' %}">
+    <button>
+        create
+    </button>
+</form>
 {% endblock %}

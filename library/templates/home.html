@@ -1,33 +1,28 @@
 {% extends 'base.html' %}
-{% block title %}
-    Home
-{% endblock %}
+
+{% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>
-    Olcha marketga xush kelibsiz
-</h1>
 
-<h2>bizning barcha bo'limlarimiz:</h2>
+<h1>Olcha Market ga xush kelibsiz</h1>
+<p>Barcha bo'limlar:</p>
+
 <form action="{% url 'product' %}">
-    <button>
-        mahsulotlar
-    </button>
+<button>
+mahsulotlar
+</button>
 </form>
 <br>
-
-<h2>bizning barcha dokonlarimiz</h2>
 <form action="{% url 'shops' %}">
-    <button>
-        dokonlar
-    </button>
+<button>
+do'konlar
+</button>
 </form>
 <br>
-<h2>bizning barcha foydalanuvchilarimiz</h2>
 <form action="{% url 'users' %}">
-    <button>
-        foydalanuvchilar
-    </button>
+<button>
+foydalanuvchilar
+</button>
 </form>
 
 {% endblock %}
